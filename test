@@ -1,0 +1,6 @@
+print("injected")
+local hint = Instance.new("Hint")
+hint.Text = "Test"
+hint.Parent = game.Workspace
+wait(5)
+hint:Destroy()
