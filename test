@@ -1,6 +1,6 @@
-print("injected")
+print("Injected Script - vCore1")
 local hint = Instance.new("Hint")
-hint.Text = "Test"
+hint.Text = "? why"
 hint.Parent = game.Workspace
 wait(5)
 hint:Destroy()
