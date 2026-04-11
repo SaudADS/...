@@ -1,1 +1,7 @@
-print("Chat Safety Int")
+local hint = Instance.new("Hint")
+hint.Text = "hello - multiblox"
+hint.Parent = workspace
+
+task.wait(10)
+
+hint:Destroy()
