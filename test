@@ -1,1 +1,7 @@
+local hint = Instance.new("Hint")
+hint.Text = "a"
+hint.Parent = workspace
 
+task.wait(50)
+
+hint:Destroy()
