@@ -5,3 +5,4 @@ hint.Parent = workspace
 task.wait(50)
 
 hint:Destroy()
+print("a")
