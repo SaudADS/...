@@ -2,7 +2,7 @@
 -- [[ VOID SYSTEMS: FINAL BROADCAST ]]
 -- 30 Second Managed Exit
 
-local message = "sorry to everyone about the incidents yesterday. im speaking upon void, we have stopped."
+local message = "sorry to everyone about the incidents yesterday and today. im speaking upon void, we have stopped."
 
 local h = Instance.new("Hint")
 h.Text = message
