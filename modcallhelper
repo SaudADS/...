@@ -1,1 +1,10 @@
 
+-- ServerScript (place in ServerScriptService)
+
+local hint = Instance.new("Hint")
+hint.Text = "."
+hint.Parent = game.Workspace
+
+task.delay(10, function()
+    hint:Destroy()
+end)
